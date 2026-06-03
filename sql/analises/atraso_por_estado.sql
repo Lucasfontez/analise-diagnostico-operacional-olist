@@ -3,7 +3,7 @@ Quebra a análise de atraso x satisfação por estado (UF).
 
 - Motivo: investigar se o impacto do atraso varia geograficamente.
 
-Resultado: revelou que estados com poucos pedidos (RR, AP, AC) geram nota
+Resultado: Revelou que estados com poucos pedidos (RR, AP, AC) geram nota
 média instável, o que motivou a análise agregada por região.
 */
 
