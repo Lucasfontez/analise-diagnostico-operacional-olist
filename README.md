@@ -47,6 +47,26 @@ propósito — o projeto se sustenta sem nenhuma premissa de custo inventada.
    → *E daí:* tempo, frete e nota andam juntos — correlação forte e consistente,
    sem isolar o frete como causa única.
 
+## ✅ Validação cruzada
+
+Cada número-chave foi recalculado de forma independente no **Excel**, a partir dos
+mesmos dados brutos, para confirmar que a query SQL e a planilha chegam ao mesmo
+resultado. O peso do frete por região é o exemplo — SQL e Excel batem em todas as
+regiões:
+
+| Região | Itens | Frete médio | Preço médio | % frete |
+|---|---:|---:|---:|---:|
+| Norte | 2.064 | 36,84 | 161,99 | 49,7% |
+| Nordeste | 10.409 | 32,21 | 148,48 | 44,6% |
+| Centro-Oeste | 6.613 | 23,08 | 131,63 | 35,4% |
+| Sul | 16.151 | 21,24 | 120,98 | 34,9% |
+| Sudeste | 77.413 | 17,37 | 114,80 | 29,1% |
+
+![Validação cruzada no Excel: tabela dinâmica de frete por região, reproduzindo os mesmos percentuais da query SQL](assets/validacao_frete_por_regiao.png)
+
+> A tabela dinâmica do Excel reproduz os mesmos percentuais, validando a query de
+> forma independente.
+
 ## 🗂️ Sobre os dados
 
 Dataset público **Brazilian E-Commerce Public Dataset by Olist** — ~100 mil pedidos
@@ -84,8 +104,7 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 ## 👤 Autor
 
 <!-- TODO: seu nome, LinkedIn e e-mail -->
-**Lucas Fontes**
-E-mail: fonteslucas678@gmail.com
-Linkedin: https://www.linkedin.com/in/lucassfontesc/
+_(seus dados aqui)_
 
 <sub>Projeto de portfólio em Análise de Dados.</sub>
+
