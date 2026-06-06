@@ -1,13 +1,20 @@
 /*
-Nessa consulta, busquei medir o tempo total de espera do cliente (da compra até a entrega) 
-por região, cruzado com a nota média de avaliação.
+Mede o tempo TOTAL de espera do cliente (da compra até a entrega) por região,
+e cruza com a nota. Diferente das análises de atraso, que comparam a entrega com
+o prazo prometido, aqui calculo o tempo real vivido pelo cliente:
 
-Objetivo: testar se Norte/Nordeste têm notas baixas por lentidão absoluta, e não
-por atraso, já que entregam antes do prazo prometido.
+					data de entrega - data da compra.
 
-Resultado: confirma a relação. Quanto maior o tempo de espera, pior a nota — Norte
-(22,5 dias / 4,03) e Nordeste (19,9 / 3,97) contra Sudeste (10,7 / 4,18). O prazo
-prometido folgado mascarava a lentidão real, o que derruba a nota é o tempo absoluto.
+Observação: só pedidos entregues (delivered) com as duas datas preenchidas.
+
+Insight: Esse resultado fecha o mistério da análise por região. A nota acompanha
+o tempo de espera quase perfeitamente, o Norte espera 22,5 dias (nota 4,03) e
+Nordeste 19,9 (3,97), contra 10,7 do Sudeste (4,18). Mais que o dobro de espera.
+
+A lição é que "entregar antes do prazo" engana, a Olist dá um prazo folgado para
+o Norte/Nordeste, então tecnicamente cumpre o prazo, mas o cliente ainda espera
+3 semanas. O que derruba a satisfação é o tempo ABSOLUTO, não o cumprimento do
+prazo. Medir performance só por "% no prazo" esconde esse problema.
 */
 
 WITH Tempo_Entrega AS (
@@ -16,7 +23,7 @@ SELECT
 	rg.regiao AS regiao,
 	r.review_score AS avaliacao_pedido,
 	(o.order_delivered_customer_date::DATE -
-    order_purchase_timestamp::DATE) AS dias_entrega
+    o.order_purchase_timestamp::DATE) AS dias_entrega
 FROM orders o
 JOIN order_reviews r ON r.order_id = o.order_id
 JOIN customers c ON c.customer_id = o.customer_id
