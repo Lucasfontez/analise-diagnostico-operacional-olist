@@ -28,8 +28,7 @@ FROM orders o
 JOIN order_reviews r ON r.order_id = o.order_id
 JOIN customers c ON c.customer_id = o.customer_id
 JOIN regioes rg ON rg.uf = c.customer_state
-WHERE
-	o.order_status = 'delivered' AND o.order_delivered_customer_date IS NOT NULL
+WHERE o.order_status = 'delivered' AND o.order_delivered_customer_date IS NOT NULL
 	AND o.order_purchase_timestamp IS NOT NULL
 )
 SELECT
