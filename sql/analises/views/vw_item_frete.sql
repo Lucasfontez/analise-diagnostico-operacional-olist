@@ -39,12 +39,12 @@ CREATE OR REPLACE VIEW vw_item_frete AS
 SELECT
     i.order_id,
     i.order_item_id,
-    i.price          AS preco_item,
-    i.freight_value  AS frete_item,
+    i.price AS preco_item,
+    i.freight_value AS frete_item,
     c.customer_state AS uf,
-    reg.regiao       AS regiao
+    reg.regiao AS regiao
 FROM order_items i
-JOIN orders o    ON o.order_id    = i.order_id
+JOIN orders o ON o.order_id    = i.order_id
 JOIN customers c ON c.customer_id = o.customer_id
 LEFT JOIN regioes reg ON reg.uf   = c.customer_state;
 
