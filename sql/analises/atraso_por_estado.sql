@@ -26,9 +26,7 @@ SELECT
 FROM orders o
 JOIN order_reviews r ON r.order_id = o.order_id
 JOIN customers c ON c.customer_id = o.customer_id
-WHERE
-	o.order_status = 'delivered'
-	AND o.order_delivered_customer_date IS NOT NULL
+WHERE o.order_status = 'delivered' AND o.order_delivered_customer_date IS NOT NULL 
 	AND o.order_estimated_delivery_date IS NOT NULL
 )
 SELECT
