@@ -1,11 +1,20 @@
 /*
-Quebra a análise de atraso x satisfação por estado (UF).
+Quebra a análise de atraso x satisfação por estado (UF), para ver se o
+impacto do atraso varia geograficamente.
 
-- Motivo: investigar se o impacto do atraso varia geograficamente.
+Observação: Somente pedidos entregues (delivered) com as duas datas preenchidas.
 
-Resultado: Revelou que estados com poucos pedidos (RR, AP, AC) geram nota
-média instável, o que motivou a análise agregada por região.
+Insight: a nota varia entre estados (de 4,25 em SP a 3,84 em MA/AL), mas o
+resultado expôs um problema de método mais importante que o próprio ranking onde
+estados com pouquíssimos pedidos (RR com 41, AP com 66, AC com 80) aparecem
+lado a lado com SP (40 mil), e suas notas são estatisticamente frágeis, onde com
+poucos clientes mudam a média toda.
+
+Por isso essa análise não serve como uma conclusão final, ela somente motivou agrupar os
+estados em regiões (atraso_por_regiao.sql e a dimensão 04_dimensao_regioes),
+onde a amostra fica robusta e a leitura, confiável.
 */
+
 
 WITH Atraso_por_Estado AS (
 SELECT
