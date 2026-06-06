@@ -1,10 +1,18 @@
 /*
-Agrupa a análise de atraso x satisfação por região do Brasil (JOIN na dimensão regioes).
+Agrupa a análise de atraso x satisfação por região do Brasil, usando a dimensão
+de regioes (JOIN por uf). Uma amostra instavel da análise por estado e limpa
+onde nos lista 5 grupos robustos no lugar de 27 UFS, com várias com pouco volume.
 
-- Motivo: resolver a amostra instável da análise por estado e limpar a visualização.
+Observação: Somente com pedidos entregues (delivered) com as duas datas preenchidas.
 
-Resultado: Norte e Nordeste têm as piores notas (4,03 e 3,97) mesmo entregando
-muito antes do prazo — sinal de que algo além da pontualidade afeta a satisfação.
+Insight: Aqui conseguimos ver o ponto mais intrigante do projeto. O Norte (4,03) e Nordeste
+(3,97) têm as piores notas! Mesmo entregando bem antes do prazo prometido
+(atraso médio de -15,7 e -11,4 dias). Ou seja, não é atraso que derruba a nota
+dessas regiões, elas cumprem o prazo e ainda assim insatisfazem.
+
+Isso abre uma nova questão, onde se não é o atraso, o que é? Hipóteses a investigar:
+O tempo total de espera (prazo folgado pode esconder entrega lenta) e o peso do
+frete. Ver tempo_entrega_por_regiao.sql e frete_por_regiao.sql.
 */
 
 WITH Atraso_por_Regiao AS (
@@ -18,9 +26,7 @@ FROM orders o
 JOIN order_reviews r ON r.order_id = o.order_id
 JOIN customers c ON c.customer_id = o.customer_id
 JOIN regioes rg ON rg.uf = c.customer_state
-WHERE
-	o.order_status = 'delivered'
-	AND o.order_delivered_customer_date IS NOT NULL
+WHERE o.order_status = 'delivered' AND o.order_delivered_customer_date IS NOT NULL
 	AND o.order_estimated_delivery_date IS NOT NULL
 )
 SELECT
