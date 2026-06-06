@@ -1,16 +1,18 @@
 /*
-Busquei medir o peso do frete por região, com valor médio absoluto e frete como % do preço
+Busquei medir o peso do frete por região, onde valor médio absoluto e frete como % do preço
 (média das proporções item a item, com NULLIF para evitar divisão por zero).
+O frete_value está em order_items, então a análise parte do item de pedido.
 
-Objetivo: testar se as regiões mais lentas/insatisfeitas pagam frete mais caro.
+Insight: o frete fecha a tese, as regiões mais lentas e insatisfeitas são também
+as que pagam frete proporcionalmente mais caro. O Norte paga 49,7% do valor do
+produto só em frete (vs. 29,1% no Sudeste). Tempo de espera, peso do frete e
+insatisfação andam juntos, na mesma ordem, nas cinco regiões.
 
-Resultado: O padrão alinhado com tempo e satisfação. O Norte paga 49,7% do preço em
-frete (vs. 20,7% no Sudeste), O que acaba sendo mais que o dobro! As regiões que mais esperam 
-são as que mais pagam frete e as menos satisfeitas. Indício de problema estrutural de
-distância (vendedores concentrados no Sudeste), não de atraso pontual.
-
-Em resumo claro, a correlação forte e consistente entre tempo, frete e nota, onde
-não se pode afirmar uma causa isolada do frete.
+Leitura de negócio pelo insight: o problema do Norte/Nordeste não é atraso pontual, é
+estrutural os vendedores se concentram no Sudeste, então o produto viaja mais,
+o que custa mais tempo e mais frete ao mesmo tempo. As duas dores somadas
+derrubam a satisfação. Para melhorar, não adianta mexer no prazo, tem que
+aproximar a oferta dessas regiões (vendedores regionais, centros de distribuição).
 */
 
 WITH Frete_Regiao AS (
