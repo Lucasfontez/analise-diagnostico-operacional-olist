@@ -28,7 +28,7 @@ e forçou a separação. Cada natureza de número no seu grão certo.
 
 ```
             ┌───────────────┐
-            │  dim_regiao    │   (5 linhas: uma por região)
+            │  dim_regiao   │   (5 linhas: uma por região)
             └───────┬───────┘
                     │ 1
         ┌───────────┴───────────┐
