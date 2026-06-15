@@ -47,6 +47,21 @@ propósito — o projeto se sustenta sem nenhuma premissa de custo inventada.
    → *E daí:* tempo, frete e nota andam juntos — correlação forte e consistente,
    sem isolar o frete como causa única.
 
+## 💡 Recomendações estratégicas
+
+Os achados acima viram ação em [`docs/recomendacoes.md`](docs/recomendacoes.md),
+onde cada recomendação segue o formato **problema → hipótese → ação → métrica de
+sucesso**, ancorada apenas no que o dado medido sustenta. Em resumo:
+
+1. **Trocar o KPI de logística** — medir tempo absoluto de entrega, não só "% no prazo"
+   (que mascara a lentidão das regiões de prazo folgado).
+2. **Tratar pontualidade como piso** — atacar o atraso desde o 1º dia, com gatilho para
+   os ~6,77% de pedidos em risco (pouco volume, muito impacto na nota).
+3. **Aproximar a oferta das regiões distantes** — sellers/CD regionais atacam tempo *e*
+   frete na raiz (a aposta estrutural; validar por piloto).
+4. **Frete como alavanca de curto prazo** — política de frete segmentada onde ele mais
+   pesa (com o limite explícito de que falta dado de custo para dimensionar o retorno).
+
 ## 📊 Dashboard (Power BI)
 
 O dashboard foi construído em Power BI sobre as duas views do projeto, em um
