@@ -47,6 +47,15 @@ propósito — o projeto se sustenta sem nenhuma premissa de custo inventada.
    → *E daí:* tempo, frete e nota andam juntos — correlação forte e consistente,
    sem isolar o frete como causa única.
 
+## 📊 Dashboard (Power BI)
+
+O dashboard foi construído em Power BI sobre as duas views do projeto, em um
+star schema com `dim_regiao` no centro. O modelo, as medidas DAX e as decisões
+de construção estão documentados em
+[`docs/dashboard_powerbi.md`](docs/dashboard_powerbi.md).
+
+📄 **[Ver o dashboard completo em PDF](assets/diagnostico-operacional-olist.pdf)**
+
 ## ✅ Validação cruzada
 
 Cada número-chave foi recalculado de forma independente no **Excel**, a partir dos
@@ -123,6 +132,6 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 ## 👤 Autor
 
 **Lucas Fontes**
-[LinkedIn](https://linkedin.com/in/SEU-PERFIL) · seu@email.com
+[LinkedIn](https://www.linkedin.com/in/lucassfontesc/) · fonteslucas678@gmail.com
 
 <sub>Projeto de portfólio em Análise de Dados.</sub>
