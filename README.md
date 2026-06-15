@@ -150,6 +150,6 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 ## 👤 Autor
 
 **Lucas Fontes**
-[LinkedIn](https://linkedin.com/in/SEU-PERFIL) · seu@email.com
 
+[LinkedIn](https://www.linkedin.com/in/lucassfontesc/) · fonteslucas678@gmaill.com
 <sub>Projeto de portfólio em Análise de Dados.</sub>
