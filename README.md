@@ -1,4 +1,4 @@
-# Análise de Lucratividade no E-commerce Olist
+# Análise Operacional no E-commerce Olist
 
 > **Onde a operação da Olist perde valor:** como o atraso na entrega derruba a
 > satisfação do cliente, e onde o frete pesa mais na conta por região.
