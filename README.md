@@ -152,4 +152,5 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 **Lucas Fontes**
 
 [LinkedIn](https://www.linkedin.com/in/lucassfontesc/) · fonteslucas678@gmaill.com
+
 <sub>Projeto de portfólio em Análise de Dados.</sub>
