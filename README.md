@@ -7,13 +7,13 @@
 ![SQL](https://img.shields.io/badge/SQL-PostgreSQL-336791)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811)
 ![Excel](https://img.shields.io/badge/Excel-Valida%C3%A7%C3%A3o-217346)
-![Status](https://img.shields.io/badge/status-em%20constru%C3%A7%C3%A3o-orange)
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-success)
 
 ---
 
 ## 🎯 Tese
 
-A lucratividade de um marketplace não vaza só pela margem — vaza pela experiência.
+A saúde de um marketplace não vaza só pela margem — vaza pela experiência.
 Este projeto investiga duas alavancas **medíveis** dessa perda, sobre ~100 mil
 pedidos reais da Olist (2016–2018):
 
@@ -83,19 +83,46 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 
 ## 📁 Estrutura do repositório
 
+```
+.
+├── assets/
+│   └── validacao_frete_por_regiao.png      # print da validação cruzada (Excel)
+├── docs/
+│   └── dashboard_powerbi.md                # modelo, medidas DAX e processo do Power BI
+├── sql/
+│   ├── README.md                           # índice e ordem de execução dos scripts
+│   ├── 01_criacao_tabelas.sql              # cria as 9 tabelas do dataset
+│   ├── 02_importacoes.sql                  # carga via COPY nativo do PostgreSQL
+│   ├── 03_chaves_indices.sql               # PKs e índices pós-carga
+│   ├── 04_dimensao_regioes.sql             # de/para UF → região do Brasil
+│   └── analises/
+│       ├── atraso_entrega_satisfacao.sql   # tese principal
+│       ├── atraso_por_estado.sql           # quebra por UF
+│       ├── atraso_por_regiao.sql           # agregação por região
+│       ├── tempo_entrega_por_regiao.sql    # tempo absoluto × nota
+│       ├── frete_por_regiao.sql            # peso do frete por região
+│       └── views/
+│           ├── vw_pedido_analise.sql       # grão de pedido (fonte da página 1)
+│           └── vw_item_frete.sql           # grão de item (fonte da página 2)
+└── README.md
+```
+
 ## ▶️ Como reproduzir
 
 1. Baixe os dados do Kaggle (link acima) e coloque os CSVs numa pasta local.
 2. Crie o banco no PostgreSQL e rode os scripts de `sql/` na ordem numérica
    (ajuste os caminhos do `02_importacoes.sql` para a sua pasta de CSVs).
-3. Rode as queries de `sql/analises/` para reproduzir cada achado.
-4. *(em breve)* Abra `powerbi/dashboard.pbix` e aponte a conexão para o seu banco.
+   Veja `sql/README.md` para a ordem de execução e o que cada script prova.
+3. Rode as queries de `sql/analises/` para reproduzir cada achado e crie as
+   views de `sql/analises/views/`.
+4. O dashboard foi construído em Power BI sobre essas duas views. O modelo, as
+   medidas DAX e as decisões de construção estão em `docs/dashboard_powerbi.md`.
 
 ---
 
 ## 👤 Autor
 
-<!-- TODO: seu nome, LinkedIn e e-mail -->
-Lucas Fontes
-<sub>Projeto de portfólio em Análise de Dados.</sub>
+**Lucas Fontes**
+[LinkedIn](https://linkedin.com/in/SEU-PERFIL) · seu@email.com
 
+<sub>Projeto de portfólio em Análise de Dados.</sub>
