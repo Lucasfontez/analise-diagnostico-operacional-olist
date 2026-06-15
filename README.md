@@ -110,9 +110,12 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 ```
 .
 ├── assets/
+│   ├── diagnostico-operacional-olist.pdf   # dashboard exportado (Power BI)
 │   └── validacao_frete_por_regiao.png      # print da validação cruzada (Excel)
 ├── docs/
-│   └── dashboard_powerbi.md                # modelo, medidas DAX e processo do Power BI
+│   ├── analise_sql.md                      # narrativa da investigação SQL
+│   ├── dashboard_powerbi.md                # modelo, medidas DAX e processo do Power BI
+│   └── recomendacoes.md                    # recomendações estratégicas
 ├── sql/
 │   ├── README.md                           # índice e ordem de execução dos scripts
 │   ├── 01_criacao_tabelas.sql              # cria as 9 tabelas do dataset
@@ -147,7 +150,6 @@ Fonte: [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kag
 ## 👤 Autor
 
 **Lucas Fontes**
-
-[LinkedIn](https://www.linkedin.com/in/lucassfontesc/) · fonteslucas678@gmail.com
+[LinkedIn](https://linkedin.com/in/SEU-PERFIL) · seu@email.com
 
 <sub>Projeto de portfólio em Análise de Dados.</sub>
