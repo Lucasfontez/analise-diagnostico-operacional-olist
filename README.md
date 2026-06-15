@@ -4,11 +4,6 @@
 > satisfação do cliente, e onde o frete pesa mais na conta por região.
 > Tudo medido sobre dado real — sem premissa de custo inventada.
 
-![SQL](https://img.shields.io/badge/SQL-PostgreSQL-336791)
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811)
-![Excel](https://img.shields.io/badge/Excel-Valida%C3%A7%C3%A3o-217346)
-![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-success)
-
 ---
 
 ## 🎯 Tese
