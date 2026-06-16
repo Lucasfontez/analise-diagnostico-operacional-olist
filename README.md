@@ -2,13 +2,13 @@
 
 > **Onde a operação da Olist perde valor:** como o atraso na entrega derruba a
 > satisfação do cliente, e onde o frete pesa mais na conta por região.
-> Tudo medido sobre dado real — sem premissa de custo inventada.
+> Tudo medido sobre dado real! Sem premissa de custo inventada.
 
 ---
 
 ## 🎯 Tese
 
-A saúde de um marketplace não vaza só pela margem — vaza pela experiência.
+A saúde de um marketplace não vaza só pela margem, ela vaza pela experiência.
 Este projeto investiga duas alavancas **medíveis** dessa perda, sobre ~100 mil
 pedidos reais da Olist (2016–2018):
 
@@ -22,39 +22,39 @@ propósito — o projeto se sustenta sem nenhuma premissa de custo inventada.
 
 ## 📌 Principais achados
 
-1. **Pontualidade é piso, não diferencial.** A nota média cai de forma contínua —
+1. **Pontualidade é piso, não diferencial.** A nota média cai de forma contínua
    de **4,29** (no prazo) para **1,7** (atraso grave, +7 dias). Bastam **1 a 3 dias**
    de atraso para perder ~1 ponto inteiro de avaliação.
-   → *E daí:* cada dia de atraso tem custo de reputação mensurável; prazo de
+   -> *E daí:* cada dia de atraso tem custo de reputação mensurável, o prazo de
    entrega é alavanca direta de satisfação, não um detalhe operacional.
 
 2. **O prazo prometido folgado esconde a lentidão real.** Norte e Nordeste entregam
    *antes* do prazo e ainda assim têm as piores notas (**4,03** e **3,97**). O que
-   derruba não é o atraso — é o tempo absoluto de espera: o Norte espera **22,5 dias**
+   derruba não é o atraso, é o tempo absoluto de espera. Onde o Norte espera **22,5 dias**
    contra **10,7** do Sudeste.
-   → *E daí:* o problema é estrutural (vendedores concentrados no Sudeste), não um
+   -> *E daí:* o problema é estrutural (vendedores concentrados no Sudeste), não um
    atraso pontual. Uma estimativa de prazo folgada mascara o sintoma.
 
 3. **O frete pesa quase o dobro nas regiões mais distantes.** No Norte o frete
-   representa **49,7%** do preço médio do item, contra **29,1%** no Sudeste —
+   representa **49,7%** do preço médio do item, contra **29,1%** no Sudeste 
    cerca de **1,7x**. As regiões que mais esperam são as que mais pagam frete e
    as menos satisfeitas.
-   → *E daí:* tempo, frete e nota andam juntos — correlação forte e consistente,
+   -> *E daí:* tempo, frete e nota andam juntos — correlação forte e consistente,
    sem isolar o frete como causa única.
 
 ## 💡 Recomendações estratégicas
 
 Os achados acima viram ação em [`docs/recomendacoes.md`](docs/recomendacoes.md),
-onde cada recomendação segue o formato **problema → hipótese → ação → métrica de
+onde cada recomendação segue o formato **problema -> hipótese -> ação -> métrica de
 sucesso**, ancorada apenas no que o dado medido sustenta. Em resumo:
 
-1. **Trocar o KPI de logística** — medir tempo absoluto de entrega, não só "% no prazo"
+1. **Trocar o KPI de logística** Medir tempo absoluto de entrega, não só "% no prazo"
    (que mascara a lentidão das regiões de prazo folgado).
-2. **Tratar pontualidade como piso** — atacar o atraso desde o 1º dia, com gatilho para
+2. **Tratar pontualidade como piso** Atacar o atraso desde o 1º dia, com gatilho para
    os ~6,77% de pedidos em risco (pouco volume, muito impacto na nota).
-3. **Aproximar a oferta das regiões distantes** — sellers/CD regionais atacam tempo *e*
+3. **Aproximar a oferta das regiões distantes** Sellers/CD regionais atacam tempo *e*
    frete na raiz (a aposta estrutural; validar por piloto).
-4. **Frete como alavanca de curto prazo** — política de frete segmentada onde ele mais
+4. **Frete como alavanca de curto prazo** Política de frete segmentada onde ele mais
    pesa (com o limite explícito de que falta dado de custo para dimensionar o retorno).
 
 ## 📊 Dashboard (Power BI)
