@@ -41,5 +41,5 @@ o raciocínio do projeto de ponta a ponta:
 ## Nota de método
 
 As análises observam **correlação** forte e consistente entre tempo, frete e
-satisfação, mas **não afirmam causa isolada** — a relação está documentada nos
+satisfação, mas **não afirmam causa isolada**, a relação está documentada nos
 cabeçalhos de cada query, sem extrapolar o que o dado mostra.
