@@ -1,10 +1,10 @@
-# SQL — índice e ordem de execução
+# SQL: índice e ordem de execução
 
 Este diretório contém todo o trabalho de banco do projeto, em três camadas:
 **setup** (criar e carregar), **análises** (as queries que sustentam a tese) e
 **views** (a camada que alimenta o Power BI).
 
-## 1. Setup — rodar uma vez, nesta ordem
+## 1. Setup
 
 | Arquivo | O que faz |
 |---|---|
