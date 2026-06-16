@@ -26,18 +26,7 @@ e forçou a separação. Cada natureza de número no seu grão certo.
 
 ## 2. Modelo: star schema
 
-```
-            ┌───────────────┐
-            │  dim_regiao   │   (5 linhas: uma por região)
-            └───────┬───────┘
-                    │ 1
-        ┌───────────┴───────────┐
-        │ N                     │ N
- ┌──────┴──────┐         ┌──────┴──────┐
- │  Pedidos    │         │   Frete     │
- │ (pedido)    │         │  (item)     │
- └─────────────┘         └─────────────┘
-```
+![Modelo de dados em star schema no Power BI: dim_regiao ligada a Pedidos e Frete](../assets/modelo_star_schema.png)
 
 `dim_regiao` no centro, ligada por relacionamento **um-para-muitos** a
 `Pedidos[regiao]` e a `Frete[regiao]`. É o eixo de filtro comum: selecionar uma
