@@ -26,7 +26,7 @@ e forçou a separação. Cada natureza de número no seu grão certo.
 
 ## 2. Modelo: star schema
 
-![Modelo de dados em star schema no Power BI: dim_regiao ligada a Pedidos e Frete](../assets/modelo_star_schema.png)
+![Modelo de dados em star schema no Power BI: dim_regiao ligada a Pedidos e Frete](../assets/Modelagem.jpg)
 
 `dim_regiao` no centro, ligada por relacionamento **um-para-muitos** a
 `Pedidos[regiao]` e a `Frete[regiao]`. É o eixo de filtro comum: selecionar uma
